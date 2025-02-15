@@ -1,21 +1,19 @@
-
 export default async function decorate(block) {
-    const heroCustomContent = document.createElement('div');
-    heroCustomContent.classList.add('hero-custom-content');
-    const rows = [...block.children];
-    rows.forEach((row, r) => {
-        [...row.children].forEach((col, c) => {
-            if (c === 0) {
-                // create image content
-                heroCustomContent.append(col);
-            } else {
-                // create text content
-                const title = col.querySelector('h1');
-                const subtitle = col.querySelector('p');
-                const cta1 = col.querySelector('p:nth-of-type(2)');
-                const cta2 = col.querySelector('p:nth-of-type(3)');
-                console.log(title, subtitle, cta1, cta2)
-                const rightSideContent = `
+  const heroCustomContent = document.createElement("div");
+  heroCustomContent.classList.add("hero-custom-content");
+  const rows = [...block.children];
+  rows.forEach((row) => {
+    [...row.children].forEach((col, c) => {
+      if (c === 0) {
+        // create image content
+        heroCustomContent.append(col);
+      } else {
+        // create text content
+        const title = col.querySelector("h1");
+        const subtitle = col.querySelector("p");
+        const cta1 = col.querySelector("p:nth-of-type(2)");
+        const cta2 = col.querySelector("p:nth-of-type(3)");
+        const rightSideContent = `
                 <div class="hero-text-content">
                     <h1 class="hero-custom-title">${title.innerHTML}</h1>
                     <p class="sale-subtitle">${subtitle.innerHTML}</p>
@@ -24,11 +22,11 @@ export default async function decorate(block) {
                         <a class="hero-custom-link btn-secondary" href="${cta2.href}">${cta2.textContent}</a>
                     </div>
                 </div>`;
-                heroCustomContent.innerHTML += rightSideContent;
-            }
-        })
+        heroCustomContent.innerHTML += rightSideContent;
+      }
     });
+  });
 
-    block.textContent = '';
-    block.append(heroCustomContent);
+  block.textContent = "";
+  block.append(heroCustomContent);
 }
