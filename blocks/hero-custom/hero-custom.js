@@ -1,6 +1,6 @@
 export default async function decorate(block) {
-  const heroCustomContent = document.createElement("div");
-  heroCustomContent.classList.add("hero-custom-content");
+  const heroCustomContent = document.createElement('div');
+  heroCustomContent.classList.add('hero-custom-content');
   const rows = [...block.children];
   rows.forEach((row) => {
     [...row.children].forEach((col, c) => {
@@ -9,10 +9,10 @@ export default async function decorate(block) {
         heroCustomContent.append(col);
       } else {
         // create text content
-        const title = col.querySelector("h1");
-        const subtitle = col.querySelector("p");
-        const cta1 = col.querySelector("p:nth-of-type(2)");
-        const cta2 = col.querySelector("p:nth-of-type(3)");
+        const title = col.querySelector('h1');
+        const subtitle = col.querySelector('p');
+        const cta1 = col.querySelector('p:nth-of-type(2)');
+        const cta2 = col.querySelector('p:nth-of-type(3)');
         const rightSideContent = `
                 <div class="hero-text-content">
                     <h1 class="hero-custom-title">${title.innerHTML}</h1>
@@ -27,6 +27,6 @@ export default async function decorate(block) {
     });
   });
 
-  block.textContent = "";
+  block.textContent = '';
   block.append(heroCustomContent);
 }
