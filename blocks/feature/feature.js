@@ -1,12 +1,12 @@
 export default async function decorate(block) {
 
-    const feature = document.querySelector('.feature');
-    const featureImage = block.querySelector('picture');
-    const featureTitle = block.querySelector('h2');
-    const featureSubtitle = block.querySelector('h3');
-    const featureLink = block.querySelector('a');
+  const feature = document.querySelector('.feature');
+  const featureImage = block.querySelector('picture');
+  const featureTitle = block.querySelector('h2');
+  const featureSubtitle = block.querySelector('h3');
+  const featureLink = block.querySelector('a');
 
-    const textContainer = `
+  const textContainer = `
     <div class="text-container">
         <div class="text-title">${featureTitle.textContent}</div>
         <div class="text-description">${featureSubtitle.textContent}</div>
@@ -15,7 +15,7 @@ export default async function decorate(block) {
         </div>
     </div>`;
 
-    feature.innerHTML = '';
-    feature.appendChild(featureImage);
-    feature.innerHTML += textContainer;
+  feature.innerHTML = '';
+  feature.appendChild(featureImage);
+  feature.innerHTML += textContainer;
 }
