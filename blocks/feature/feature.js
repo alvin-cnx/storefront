@@ -1,5 +1,4 @@
 export default async function decorate(block) {
-
   const feature = document.querySelector('.feature');
   const featureImage = block.querySelector('picture');
   const featureTitle = block.querySelector('h2');
