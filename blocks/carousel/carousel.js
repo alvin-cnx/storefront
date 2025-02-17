@@ -9,7 +9,7 @@ export default function decorate(block) {
         const img = row.querySelector('img');
         const cardImg = document.createElement('div');
         cardImg.classList.add('carousel-item-image');
-        cardImg.style = 'background-image: url(' + img.src + ')';
+        cardImg.style = `background-image: url(${img.src})`;
         carouselItem.append(cardImg);
 
         // card text
@@ -32,8 +32,6 @@ export default function decorate(block) {
         textContent.append(cardLink);
         carouselItem.append(textContent);
         carousel.append(carouselItem);
-
-
     });
 
     block.textContent = '';
@@ -48,7 +46,7 @@ export default function decorate(block) {
     prev.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" stroke="#fff" /><path d="M0 0h24v24H0z" fill="none"/></svg>';
     prev.addEventListener('click', () => {
         document.querySelector('.carousel').scrollBy({ left: (-1) * slideDistance, behavior: 'smooth' });
-    })
+    });
     carouselWrapper.append(prev);
 
     // next button
@@ -57,6 +55,6 @@ export default function decorate(block) {
     next.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" stroke="#fff" /><path d="M0 0h24v24H0z" fill="none"/></svg>';
     next.addEventListener('click', () => {
         document.querySelector('.carousel').scrollBy({ left: slideDistance, behavior: 'smooth' });
-    })
+    });
     carouselWrapper.append(next);
 }
