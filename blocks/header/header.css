@@ -9,6 +9,16 @@ header .nav-wrapper {
     border-bottom: 1px solid var(--color-neutral-300);
 }
 
+header .logo {
+    background-size: 100% 100%;
+    background-image: url(/icons/cnx-bikes-logo.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 34px;
+    width: 155px;
+}
+
 header nav {
     box-sizing: border-box;
     display: grid;
@@ -179,16 +189,6 @@ header nav .nav-sections ul > li > ul {
 
 header nav .nav-sections ul > li > ul > li {
     font-weight: 400;
-}
-
-.logo {
-    background-size: 100% 100%;
-    background-image: url(/icons/cnx-bikes-logo.svg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    display: block;
-    height: 34px;
-    width: 155px;
 }
 
 @media (width >= 900px) {
