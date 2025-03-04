@@ -33,6 +33,8 @@
     --color-positive-200: #eff5ef;
     --color-positive-500: #7fb078;
     --color-positive-800: #53824c;
+    --color-primary-red: #a80116;
+    --color-secondary-gray: #3a3a3a;
     --color-informational-200: #eeeffb;
     --color-informational-500: #6978d9;
     --color-informational-800: #5d6dd6;
@@ -49,6 +51,7 @@
     --color-action-button-hover: var(--color-neutral-300);
     --color-opacity-16: rgb(255 255 255 / 16%);
     --color-opacity-24: rgb(255 255 255 / 24%);
+    --fa-font-solid: normal 900 1em / 1 "Font Awesome 6 Free";
     --grid-1-columns: 4;
     --grid-1-margins: 0;
     --grid-1-gutters: 16px;
@@ -232,6 +235,7 @@ h1 {
 
 h2 {
     font: var(--type-display-2-font);
+    font-weight: 900;
     letter-spacing: var(--type-display-2-letter-spacing);
 }
 
@@ -412,7 +416,7 @@ main > .section {
 }
 
 main > .section > div {
-    max-width: 1200px;
+    max-width: 1450px;
     margin: auto;
     padding: 0 var(--spacing-medium);
 }
@@ -500,4 +504,75 @@ body.columns main > .section:empty {
 */
 main[hidden] {
     display: none !important;
+}
+
+/* CNX Bikes styles */
+.btn-primary {
+    background-color: var(--color-primary-red);
+    border-color: var(--color-primary-red);
+}
+
+.btn-primary:not(.dropin-design),
+.btn-secondary:not(.dropin-design) {
+    -ms-flex-align: center;
+    -ms-flex-direction: row;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    align-items: center;
+    border-radius: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    height: 50px;
+    justify-content: center;
+    line-height: 25px;
+    padding: 5px;
+    text-align: center;
+    width: 50%;
+}
+
+.btn-primary:not(.dropin-design),
+.btn-secondary:not(.dropin-design),
+.btn-primary:not(.dropin-design):hover,
+.btn-secondary:not(.dropin-design):hover {
+    border-style: solid;
+    border-width: 2px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-primary:not(.dropin-design):hover {
+    border-color: var(--color-primary-red);
+    background: #ca3e3e;
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary-gray);
+    border-color: var(--color-secondary-gray);
+}
+
+.btn-secondary:not(.dropin-design):hover {
+    border-color: var(--color-secondary-gray);
+    background: #56575c;
+}
+
+div:not(.product-list-page-container) h1:not(.hero-custom-title) {
+    color: white;
+    font-weight: 900;
+    left: 0;
+    letter-spacing: 0;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    top: 3.25em;
+    width: 100vw;
+}
+
+main > .section p {
+    margin-top: 0;
 }
