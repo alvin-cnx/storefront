@@ -429,6 +429,10 @@ section > div {
         overflow: visible;
     }
 
+    header nav a[title="Sale"] {
+        color: var(--color-primary-red);
+    }
+
     header nav .nav-sections {
         display: block;
         visibility: visible;

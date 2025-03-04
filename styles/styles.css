@@ -193,6 +193,10 @@ body:not(.appear) {
     display: none;
 }
 
+button.group.flex {
+    border-radius: 50%;
+}
+
 header {
     grid-row: 1;
     height: var(--nav-height);
