@@ -216,19 +216,6 @@ export default async function decorate(block) {
 
   navTools.querySelector('.nav-search-button').addEventListener('click', () => toggleSearch());
 
-  // Close panels when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!minicartPanel.contains(e.target) && !cartButton.contains(e.target)) {
-      toggleMiniCart(false);
-    }
-
-    if (!searchPanel.contains(e.target) && !searchButton.contains(e.target)) {
-      toggleSearch(false);
-    }
-  });
-
-
-
   const logo = document.createElement('a');
   logo.className = 'logo';
   logo.height = '34';
@@ -262,8 +249,6 @@ export default async function decorate(block) {
   );
   renderAuthDropdown(navTools);
 
-
-
   /** Mini Cart */
   const excludeMiniCartFromPaths = ['/checkout'];
 
@@ -288,6 +273,17 @@ export default async function decorate(block) {
   const miniCartPath = miniCartMeta ? new URL(miniCartMeta, window.location).pathname : '/mini-cart';
   loadFragment(miniCartPath).then((miniCartFragment) => {
     minicartPanel.append(miniCartFragment.firstElementChild);
+  });
+
+  // Close panels when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!minicartPanel.contains(e.target) && !cartButton.contains(e.target)) {
+      toggleMiniCart(false);
+    }
+
+    if (!searchPanel.contains(e.target) && !searchButton.contains(e.target)) {
+      toggleSearch(false);
+    }
   });
 
   async function toggleMiniCart(state) {
