@@ -429,6 +429,14 @@ section > div {
         overflow: visible;
     }
 
+    header nav a[title="Sale"] {
+        color: var(--color-primary-red);
+    }
+
+    header nav a[title="Sale"]:hover {
+        color: #ca3e3e;
+    }
+
     header nav .nav-sections {
         display: block;
         visibility: visible;

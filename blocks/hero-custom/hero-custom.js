@@ -6,7 +6,11 @@ export default async function decorate(block) {
     [...row.children].forEach((col, c) => {
       if (c === 0) {
         // create image content
-        heroCustomContent.append(col);
+        const pictureMarkup = col.querySelector('picture');
+        const imageContainer = document.createElement('div');
+        imageContainer.classList = 'hero-image-content';
+        imageContainer.append(pictureMarkup);
+        heroCustomContent.append(imageContainer);
       } else {
         // create text content
         const title = col.querySelector('h1');

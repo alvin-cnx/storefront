@@ -18,6 +18,13 @@
     letter-spacing: 0;
 }
 
+.hero-image-content {
+    align-items: center;
+    display: flex;
+    max-height: 540px;
+    overflow: hidden;
+}
+
 .hero-text-content > * {
     margin-left: 3rem;
     margin-right: 3rem;
@@ -35,6 +42,6 @@
 
 @media screen and (min-width: 980px) {
     .hero-custom.block > div {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
     }
 }
