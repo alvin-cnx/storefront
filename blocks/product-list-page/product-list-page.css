@@ -8,6 +8,10 @@
     object-fit: contain;
 }
 
+.product-list-page .grid-container {
+    gap: 1em;
+}
+
 @media (width >= 750px) {
     .product-list-page {
         min-height: auto;
