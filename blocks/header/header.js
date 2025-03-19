@@ -13,6 +13,8 @@ import { loadFragment } from '../fragment/fragment.js';
 import renderAuthCombine from './renderAuthCombine.js';
 import { renderAuthDropdown } from './renderAuthDropdown.js';
 
+import { initPopupCookie, getCookie, setCookie } from '../popup/popup-cookie.js';
+
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
@@ -310,4 +312,12 @@ export default async function decorate(block) {
     },
     { eager: true },
   );
+
+  // load popup as fragment
+  const popupMeta = getMetadata('popup');
+  const popupPath = popupMeta ? new URL(popupMeta, window.location).pathname : '/popup';
+  const popupFragment = await loadFragment(popupPath);
+  document.querySelector('body > main').append(popupFragment.firstElementChild);
+  initPopupCookie();
 }
+

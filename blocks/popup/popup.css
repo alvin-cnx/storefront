@@ -1,0 +1,98 @@
+.black_overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    height: 100%;
+    left: 0%;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 19;
+}
+
+button {
+    cursor: pointer;
+}
+
+.close-popup {
+    background-color: transparent;
+    border: none;
+    color: #201f1e;
+    float: right;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 20px;
+}
+
+#coupon-popup-box {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.coupon-popup__button {
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.coupon-popup__button:hover {
+    background-color: #0062cc;
+}
+
+.coupon-popup__formbox {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    left: 25%;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 20px;
+    top: 25%;
+    width: 50%;
+    z-index: 20;
+}
+
+.coupon-popup__h2 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: normal;
+    margin-bottom: 10px;
+    margin-top: 0;
+    text-align: left;
+}
+
+.coupon-popup__input[type="tel"] {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.coupon-popup__label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.coupon-popup__p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.thank-you {
+    background-color: #fff;
+    border-radius: 5px;
+    display: none;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 20px;
+    text-align: left;
+}
