@@ -13,7 +13,7 @@ import { loadFragment } from '../fragment/fragment.js';
 import renderAuthCombine from './renderAuthCombine.js';
 import { renderAuthDropdown } from './renderAuthDropdown.js';
 
-import { initPopupCookie, getCookie, setCookie } from '../popup/popup-cookie.js';
+import { initPopupCookie } from '../popup/popup-cookie.js';
 
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
@@ -320,4 +320,3 @@ export default async function decorate(block) {
   document.querySelector('body > main').append(popupFragment.firstElementChild);
   initPopupCookie();
 }
-
